@@ -1,0 +1,97 @@
+
+
+
+<div class="main">
+
+    <div class="img">
+      <img src="assets/images/bg-image.png" alt="">
+    </div>
+    
+    
+        <!-- <nav  > 
+          <input type="checkbox" id="check">
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+          </label>
+          
+          <label class="logo"> <img  width="150" height="60" src="assets/images/puc.png" alt=""> </label>
+          <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a  routerLink="/Participents" >Participation</a></li>
+            
+          
+          </ul>
+        </nav> -->
+       
+    </div>
+    
+    
+    
+    
+    <!--  Body Section -->
+    
+    
+    
+    
+    <div  class="body">
+    
+      
+    <div  class="container" >
+    
+
+        <div class="card">
+
+
+            <div class="login-box"  >
+                 <h1 style="color: white; margin-left: 150px; font-weight: 200; margin-bottom: 20px;">Register</h1>
+                <form #form="ngForm" (ngSubmit)="userJoin(form.value)"   fxLayout="column" fxLayoutAlign="space-arround center" >
+                
+                    <!--  name -->
+                  
+                    <mat-form-field  appearance="fill" >
+                        <mat-label >Name</mat-label>
+                        <input ngModel name="name" matInput>
+                      </mat-form-field>
+                    <!--  email -->
+                  
+                    <mat-form-field  appearance="fill" >
+                        <mat-label >Email</mat-label>
+                        <input ngModel name="email" matInput>
+                      </mat-form-field>
+                    <!-- phone  -->
+                    <mat-form-field  appearance="fill" >
+                        <mat-label >Phone</mat-label>
+                        <input ngModel name="phone" matInput>
+                      </mat-form-field>
+                    <!-- cnic  -->
+                    <mat-form-field  appearance="fill" >
+                        <mat-label >Cnic</mat-label>
+                        <input ngModel name="cnic" matInput>
+                      </mat-form-field>
+                    <!-- University  -->
+                    <mat-form-field  appearance="fill" >
+                        <mat-label >University</mat-label>
+                        <input ngModel name="university" matInput>
+                      </mat-form-field>
+
+                   
+                      
+                   
+
+                        
+                 
+                          
+                 <button>SEND</button>
+                  <!-- <a  href="#">
+                         SEND
+                     <span></span>
+                  </a> -->
+                </form>
+              </div>
+        
+        </div>
+
+    
+    </div>
+
+    </div>

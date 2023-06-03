@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+body{
+    margin: 0px;
+    padding: 0px;
+    background: #050235;
+
+}
+
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+*{
+    font-family: montserrat;
+    
+}
+/* Dark mode styles */
+.dark-mode .mat-slider-track-fill {
+    background-color: #ffffff; /* Set the track fill color for dark mode */
+  }
+  
+  /* White handle styles */
+  .white-handle .mat-slider-thumb {
+    background-color: #ffffff; /* Set the handle color to white */
+  }
+  
+
+.dark-theme {
+    color: black;
+    background-color: #fdfdfd;
+ 
+  }
+  
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

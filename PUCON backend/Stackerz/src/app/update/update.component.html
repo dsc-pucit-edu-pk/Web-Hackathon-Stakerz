@@ -1,0 +1,70 @@
+
+
+
+<div class="main">
+
+    <div class="img">
+      <img src="assets/images/bg-image.png" alt="">
+    </div>
+    
+    
+        <nav  > 
+          <input type="checkbox" id="check">
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+          </label>
+          
+          <label class="logo"> <img  width="150" height="60" src="assets/images/puc.png" alt=""> </label>
+          <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Participents</a></li>
+            <li  ><a   routerLink="/AddEvent" >Add Event</a></li>
+          
+          </ul>
+        </nav>
+       
+    </div>
+    
+    
+    
+    
+    <!--  Body Section -->
+    
+    
+    
+    
+    <div  class="body">
+    
+      
+     
+      <div  class="container" >
+    
+
+    
+      <div class="card-client" *ngFor="let item of GetEventList" >
+        <div style="display: flex; justify-content: space-between;  ">
+          <mat-icon  (click)="Delete(item)" >delete</mat-icon>
+          <!-- <mat-icon  (click)="update(item)"  >edit</mat-icon> -->
+          
+        </div>
+        
+        <div class="user-picture">
+           
+          <img src="assets/images/{{item.poster}}" alt="">
+       
+        </div>
+        <!-- <button (click)="Delete(item)" style="color: black; background-color: white;" >delete</button> -->
+        <p class="name-client"> {{item.title}}
+            <span>{{item.desc}}</span>
+        </p>
+        <div class="social-media">
+        <button class="btn" >Join Now</button>
+        </div>
+    </div>
+
+
+
+
+    </div>
+
+    </div>

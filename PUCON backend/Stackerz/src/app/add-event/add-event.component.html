@@ -1,0 +1,107 @@
+
+
+
+<div class="main">
+
+    <div class="img">
+      <img src="assets/images/bg-image.png" alt="">
+    </div>
+    
+    
+        <nav  > 
+          <input type="checkbox" id="check">
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+          </label>
+          
+          <label class="logo"> <img  width="150" height="60" src="assets/images/puc.png" alt=""> </label>
+          <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a  routerLink="/Participents" >Participation</a></li>
+            
+          
+          </ul>
+        </nav>
+       
+    </div>
+    
+    
+    
+    
+    <!--  Body Section -->
+    
+    
+    
+    
+    <div  class="body">
+    
+      
+    <div  class="container" >
+    
+
+        <div class="card">
+
+
+            <div class="login-box"  >
+                 <h1 style="color: white; margin-left: 120px; font-weight: 600; margin-bottom: 20px; font-size: 29px;">Create Event</h1>
+                <form    fxLayout="column" fxLayoutAlign="space-arround center" >
+                
+                    <!--  Title -->
+                  
+                    <mat-form-field  appearance="fill" >
+                        <mat-label>Title</mat-label>
+                        <input    [(ngModel)]="GetData.title"  [ngModelOptions]="{ standalone: true }"  matInput>
+                      </mat-form-field>
+
+                  <!--  for Description -->
+                      
+                  <mat-form-field  appearance="fill" >
+                        <mat-label>Description</mat-label>
+                        <input    [(ngModel)]="GetData.desc" [ngModelOptions]="{ standalone: true }" matInput>
+                      </mat-form-field>
+                      
+                      <!--  For Date picker -->
+                      
+                      <mat-form-field>
+                        <mat-label>Choose a date</mat-label>
+                        <input    [(ngModel)]="GetData.date"  [ngModelOptions]="{ standalone: true }" matInput [matDatepicker]="picker">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+                          <!--    Time -->
+                         
+                          <mat-form-field  appearance="fill" >
+                            <mat-label>Start Time</mat-label>
+                            <input      [(ngModel)]="GetData.starttime"  [ngModelOptions]="{ standalone: true }" matInput>
+                          </mat-form-field>
+                          <mat-form-field  appearance="fill" >
+                            <mat-label>End Time</mat-label>
+                            <input      [(ngModel)]="GetData.endtime" [ngModelOptions]="{ standalone: true }"  matInput>
+                          </mat-form-field>
+
+                          <mat-form-field>
+                            <mat-label>Duration</mat-label>
+                            <mat-select  [(ngModel)]="GetData.duration" name="duration"  [ngModelOptions]="{ standalone: true }" >
+                              <mat-option *ngFor="let time of TimeList" [value]="time">
+                                {{time}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                 
+                          <div class="border" (click)="file.click()" >
+                            <input type="file"  (change)="PosterChangeEvent($event)"   #file hidden>
+                            <img width="280" height="90" *ngIf=" poster !=  ''"   src="{{poster}}" alt="">      
+                            <p  *ngIf="poster == ''" style="color: white;">upload Image</p>
+                          </div>
+                 <button  (click)="AddEvent()" >SEND</button>
+               
+                </form>
+              </div>
+        
+        </div>
+
+    
+    </div>
+
+    </div>

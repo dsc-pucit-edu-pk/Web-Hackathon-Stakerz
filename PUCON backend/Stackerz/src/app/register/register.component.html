@@ -1,0 +1,114 @@
+<!-- 
+<div class='topper'>
+    <div class='box'>
+      <span class='borderLine'></span>
+      <form #form="ngForm" (ngSubmit)="singup(form.value)"  >
+        <h2>Sign Up</h2>
+        <div class='inputBox'>
+          <input ngModel  name='name' type='text' required='required' />
+          <span>Username</span>
+          <i></i>
+        </div>
+        <div class='inputBox'>
+          <input ngModel   name='email' type='Email' required='required' />
+          <span>Email</span>
+          <i></i>
+        </div>
+        <div class='inputBox'>
+          <input ngModel  name='password'  type='password' required='required' />
+          <span>Password</span>
+          <i></i>
+        </div>
+        <input   class='but ' type='submit' value='Signup' />
+      </form>
+    </div>
+    </div> -->
+
+
+
+    
+
+
+<div class="main">
+  
+
+  <div class="img">
+    <img src="assets/images/bg-image.png" alt="">
+  </div>
+  
+  
+      <!-- <nav  > 
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        
+        <label class="logo"> <img  width="150" height="60" src="assets/images/puc.png" alt=""> </label>
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a  routerLink="/Participents" >Participation</a></li>
+          
+        
+        </ul>
+      </nav> -->
+     
+  </div>
+  
+  
+  
+  
+  <!--  Body Section -->
+  
+  
+  
+  
+  <div  class="body">
+  
+    
+  <div  class="container" >
+  
+
+      <div class="card">
+
+
+          <div class="login-box"  >
+               <h1 style="color: white; margin-left: 150px; font-weight: 200; margin-bottom: 20px;">Register</h1>
+              <form #form="ngForm" (ngSubmit)="singup(form.value)"   fxLayout="column" fxLayoutAlign="space-arround center" >
+              
+                  <!--  Title -->
+                
+                  <mat-form-field  appearance="fill" >
+                      <mat-label >Name</mat-label>
+                      <input ngModel name="name" matInput>
+                    </mat-form-field>
+
+                <!--  for Description -->
+                    
+                <mat-form-field  appearance="fill" >
+                      <mat-label >Email</mat-label>
+                      <input ngModel name="email" matInput>
+                    </mat-form-field>
+
+                <mat-form-field  appearance="fill" >
+                      <mat-label >Password</mat-label>
+                      <input ngModel name="password" matInput>
+                    </mat-form-field>
+                    
+                   
+               
+               <button  type="submit">SEND</button>
+                <!-- <a  href="#">
+                       SEND
+                   <span></span>
+                </a> -->
+              </form>
+            </div>
+      
+      </div>
+
+  
+  </div>
+
+  </div>
+
+           
